@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+    <title>Atlas zemí</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="./styles.css" rel="stylesheet" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body class="bgColor">
+    <header class="p-3" id="header">
+        <h1 class="display-2 text-warning text-center"><strong>Atlas zemí</strong></h1>
+        <div>
+            <select id="continent">
+                <option value="europe">Evropa</option>
+                <option value="asia">Asie</option>
+                <option value="africa">Afrika</option>
+                <option value="americas">Amerika</option>
+                <option value="oceania">Oceánie</option>
+                <option value="antarctic">Antarktida</option>
+            </select>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row" id="listCountries">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top" src="https://flagcdn.com/w320/bw.png" alt="Vlajka">
+                    <div class="card-body">
+                        <h4 class="card-title">Název státu</h4>
+                        <p class="card-text">Hlavní město</p>
+                        <a href="#" class="btn btn-info card-link">Informace</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+
+    <!-- The Modal -->
+    <div class="modal" id="windowCountry">
+        <div class="modal-dialog modal-class-edit">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header modal-class-edit" id="modal-header-content">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body modal-class-edit" id="modal-body-content">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer modal-class-edit" id ="modal-footer-content">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="atlas.js"></script>
+</body>
+
+</html>
