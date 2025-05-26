@@ -45,7 +45,9 @@ async function getData(region) {
                       <h4 class="card-title"><b>${country.name.common} (${country.cca3}</b>)</h4>
                       <p class="card-text">Počet obyvatel: ${country.population.toLocaleString('cs-CZ')}</p>
                       <a href="#" class="btn btn-info card-link" 
-                      data-name="${country.name.common}">Informace</a>
+                        data-name="${country.name.common}" 
+                        data-code="${country.cca3}">Informace
+                      </a>
                     </div>
                 </div>
             </div>            
@@ -55,12 +57,16 @@ async function getData(region) {
       document.querySelectorAll('[data-name]').forEach(button => {
         button.addEventListener('click', () => {
           console.log('pokus');
-          const countryName = button.getAttribute('data-name');
+          let countryCode = button.getAttribute('data-code');
+          if (countryCode === 'TWN') {
+            countryCode = 'CHN';
+            //U Taiwanu je potřeba použít kód Číny, protože Taiwan je považován za součást Číny v databázi. 100%.
+          }
           modalHeader.innerHTML = '';
           modalBody.innerHTML = '<div class="text-center">Načítám...</div>';
           ModalFooter.innerHTML = '';
           modal.show();
-          fetch(`https://restcountries.com/v3.1/name/${countryName}`)
+          fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
           .then(res => res.json())
           .then(data => {
             const country = data[0];
