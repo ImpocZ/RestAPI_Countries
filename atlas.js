@@ -40,7 +40,7 @@ async function getData(region) {
         blocks += `
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">                
                 <div class="card bgColorForContainer" style="margin-bottom: 20px;" id="edit-card">
-                    <img class="card-img-top" src="${country.flags.png}" alt="Vlajka" style="height: 165px; object-fit: cover; aling-items: center;">
+                    <img class="card-img-top" src="${country.flags.png}" alt="Vlajka" style="height: 180px; object-fit: cover; aling-items: center;">
                     <div class="card-body">
                       <h4 class="card-title"><b>${country.name.common} (${country.cca3}</b>)</h4>
                       <p class="card-text">Počet obyvatel: ${country.population.toLocaleString('cs-CZ')}</p>
